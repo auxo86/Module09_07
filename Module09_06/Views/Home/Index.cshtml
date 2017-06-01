@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*套樣式月曆就會美美的
+    但是如果只套月曆樣式因為很多繼承的沒有繼承到，所以選all*@
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script>
+        //利用Jquery.ui來做月曆
+        $(function () {
+            $("#Text1").datepicker();
+            //套這個是要講格式的
+            //一個h1標籤帶標題
+            //下面一個div帶內容
+            $("#div1").accordion();
+        });
+    </script>
+</head>
+<body>
+    <div>
+        Start Date: <input id="Text1"  type="text"/>
+        <div id="div1">
+            <h1>Database</h1>
+            <div class="myclass">
+                SQL
+            </div>
+            <h1>Programming</h1>
+            <div class="myclass">
+                ASP.NET MVC
+            </div>
+            <h1>Management</h1>
+            <div class="myclass">
+                PMP
+            </div>
+        </div>
+    </div>
+</body>
+</html>
